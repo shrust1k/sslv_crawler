@@ -22,7 +22,7 @@ for c in categories:
                 page_num = 30
             for i in range(1, page_num):
                 url = f"https://www.ss.lv/lv/real-estate/{c}/{p}/page{i}.html"
-                # print(url)
+                print(url)
                 file = requests.get(url=url).text
                 with open(f"{UPLOAD_FOLDER}/page{counter}.html", "w", encoding='utf-8') as f:
                     f.write(file)
